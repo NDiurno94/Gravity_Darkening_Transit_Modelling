@@ -56,10 +56,25 @@ Additional documentation, cleaned notebooks and reproducibility notes will be ad
 
 ## Methodology
 
-The project followed a structured scientific workflow to model gravity-darkened exoplanet transits and estimate the three-dimensional spin–orbit geometry of the HAT-P-70 system.
+## Methodology
 
-1. **Data Collection**
-   - Retrieved photometric observations from NASA's TESS mission.
+### 1. TESS Light Curve Preprocessing
+
+The first stage of the project focuses on preparing high-quality TESS photometric observations for gravity-darkened transit modelling.
+
+This notebook:
+
+- Searches and downloads all publicly available TESS observations of HAT-P-70.
+- Inspects the quality of each observing sector.
+- Removes poor-quality measurements using the TESS quality flags.
+- Stitches observations from multiple sectors into a single light curve.
+- Detrends the light curve using the **Lightkurve** package.
+- Folds and bins the transit signal.
+- Exports clean datasets for the subsequent modelling and parameter estimation.
+
+> **Note:** At the time this analysis was performed, TESS Sector 98 had not yet been released. The preprocessing therefore uses all publicly available observations available during the MSc project.
+
+**Notebook:** [`01_tess_lightcurve_preprocessing.ipynb`](notebooks/01_tess_lightcurve_preprocessing.ipynb)
 
 2. **Data Preparation**
    - Processed and cleaned the light curves for analysis.
