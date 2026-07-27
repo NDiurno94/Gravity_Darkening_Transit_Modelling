@@ -72,7 +72,7 @@ This notebook:
 
 > **Note:** At the time this analysis was performed, TESS Sector 98 had not yet been released. The preprocessing therefore uses all publicly available observations available during the MSc project.
 
-**Notebook:** [`01_tess_lightcurve_preprocessing.ipynb`](notebooks/01_tess_lightcurve_preprocessing.ipynb)
+**Notebook:** [`01_tess_lightcurve_preprocessing.ipynb`](Notebooks/01_tess_lightcurve_preprocessing.ipynb)
 
 2. **Data Preparation**
    - Processed and cleaned the light curves for analysis.
