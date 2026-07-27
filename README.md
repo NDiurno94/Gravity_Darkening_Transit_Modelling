@@ -131,21 +131,39 @@ The workflow:
 
 **Notebook:** [`04_gravity_darkened_transit_modelling.ipynb`](Notebooks/04_gravity_darkened_transit_modelling.ipynb)
 
-### 5. MCMC Parameter Estimation
+### 5. MCMC Simulation
 
-This notebook performs the Bayesian parameter estimation of the HAT-P-70 system using the gravity-darkened transit model developed with **STARRY**. The analysis employs the Brewer MCMC sampler to explore the parameter space and determine the most probable stellar and orbital configuration.
+This notebook prepares the Bayesian parameter estimation of the HAT-P-70 system using the gravity-darkened transit model developed with **STARRY**. It defines the model, the parameters, the prior distributions, and the likelihood function required for the Brewer MCMC sampler.
 
 The workflow:
 
 - Defines the stellar and planetary system parameters.
 - Implements the gravity-darkened transit model within the Bayesian framework.
-- Specifies the model parameters, priors, and likelihood function.
-- Runs the Brewer MCMC sampler to explore the posterior distributions.
-- Computes the best-fitting system parameters and derived quantities, including the true spin–orbit angle (ψ).
-- Generates posterior distributions, trace plots, and best-fitting transit models for comparison with the TESS observations.
+- Specifies the model parameters, priors, proposal function, and likelihood function.
+- Configures the MCMC simulation and starting conditions.
+- Exports the notebook as a Python script for execution on the UCLO computing environment.
+- Generates individual MCMC trace files during the simulation.
 
-> **Compatibility Note:** This notebook was developed using the software environment available on the University College London Observatory (UCLO) machines. It depends on the **STARRY** package and the Brewer MCMC implementation used during this research project. Reproducing the analysis may require access to the original UCLO environment or equivalent package versions.
+The exported Python script was executed using the accompanying command-line launcher (`run_mcmc.cmd`) on the University College London Observatory (UCLO) machines. Approximately 400,000 MCMC samples were generated, with the first ~100,000 samples discarded as burn-in. The individual trace files were then concatenated into a single final dataset (`FINAL_30_12_25.csv`) for subsequent analysis.
 
-**Primary notebook:** [`05_mcmc_parameter_estimation.ipynb`](Notebooks/05_mcmc_parameter_estimation.ipynb)
+> **Compatibility Note:** This notebook was developed using the software environment available on the University College London Observatory (UCLO) machines. It depends on the **STARRY** package and the Brewer MCMC implementation used during this research project. Reproducing the complete workflow may require recreating the original software environment.
 
-**Alternative implementation:** [`05b_mcmc_cosine_parameterisation.ipynb`](Notebooks/05b_mcmc_cosine_parameterisation.ipynb) — explores a cosine parameterisation of the stellar inclination (`cos(i*)`) to improve sampling behaviour and parameter estimation.
+**Notebook:** [`05_mcmc_cosine_parameterisation.ipynb`](Notebooks/05_mcmc_cosine_parameterisation.ipynb)
+
+### 6. MCMC Analysis and Scientific Results
+
+This notebook analyses the final MCMC chain produced by the simulation stage. It evaluates the posterior distributions, derives the best-fitting model parameters, and produces the scientific results presented in the dissertation.
+
+The workflow:
+
+- Loads the concatenated MCMC chain (`FINAL_30_12_25.csv`).
+- Removes the burn-in samples from the Markov chain Monte Carlo.
+- Computes the posterior distributions of the fitted parameters.
+- Produces trace plots and corner plots to assess parameter convergence.
+- Derives the best-fitting stellar and orbital parameters.
+- Calculates derived quantities, including the true spin–orbit angle (ψ).
+- Generates the figures and statistical results presented in the dissertation.
+
+> **Compatibility Note:** This notebook analyses the final MCMC chain produced during the simulation stage. Although the notebook itself can be executed independently, reproducing the results requires the MCMC chain generated using the UCLO computational workflow.
+
+**Notebook:** [`06_mcmc_parameter_estimation.ipynb`](Notebooks/06_mcmc_parameter_estimation.ipynb)

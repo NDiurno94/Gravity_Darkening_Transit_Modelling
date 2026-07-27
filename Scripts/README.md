@@ -8,11 +8,11 @@ The gravity-darkened transit modelling was developed using Jupyter notebooks; ho
 
 ### `run_30_12_25.py`
 
-Python script exported from the 05b_mcmc_cosine_parameterisation notebook.
+Python script exported from the 05_mcmc_cosine_parameterisation notebook.
 
 This script:
 
-- Loads the contamination-corrected light curve (`Data/processed/hat-p-70b_normalised.csv`).
+- Loads the contamination-corrected light curve (`Data/Processed/hat-p-70b_normalised.csv`).
 - Defines the gravity-darkened transit model using **STARRY**.
 - Implements the Brewer MCMC algorithm.
 - Generates individual MCMC trace files for each simulation run.
