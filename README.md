@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/banner.png" width="100%">
+</p>
+
 # Gravity Darkening in Exoplanet Transits
 
 A Python-based Astrophysics research project investigating whether gravity-darkened transit photometry can constrain the true three-dimensional spin–orbit geometry of the hot Jupiter system **HAT-P-70.**
