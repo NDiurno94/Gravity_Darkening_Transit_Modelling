@@ -131,8 +131,21 @@ The workflow:
 
 **Notebook:** [`04_gravity_darkened_transit_modelling.ipynb`](Notebooks/04_gravity_darkened_transit_modelling.ipynb)
 
-5. **Model Evaluation**
-   - Compared simulated and observed light curves using statistical goodness-of-fit metrics.
+### 5. MCMC Parameter Estimation
 
-6. **Scientific Interpretation**
-   - Derived the three-dimensional spin–orbit geometry of the planetary system and compared the results with published literature.
+This notebook performs the Bayesian parameter estimation of the HAT-P-70 system using the gravity-darkened transit model developed with **STARRY**. The analysis employs the Brewer MCMC sampler to explore the parameter space and determine the most probable stellar and orbital configuration.
+
+The workflow:
+
+- Defines the stellar and planetary system parameters.
+- Implements the gravity-darkened transit model within the Bayesian framework.
+- Specifies the model parameters, priors, and likelihood function.
+- Runs the Brewer MCMC sampler to explore the posterior distributions.
+- Computes the best-fitting system parameters and derived quantities, including the true spin–orbit angle (ψ).
+- Generates posterior distributions, trace plots, and best-fitting transit models for comparison with the TESS observations.
+
+> **Compatibility Note:** This notebook was developed using the software environment available on the University College London Observatory (UCLO) machines. It depends on the **STARRY** package and the Brewer MCMC implementation used during this research project. Reproducing the analysis may require access to the original UCLO environment or equivalent package versions.
+
+**Primary notebook:** [`05_mcmc_parameter_estimation.ipynb`](Notebooks/05_mcmc_parameter_estimation.ipynb)
+
+**Alternative implementation:** [`05b_mcmc_cosine_parameterisation.ipynb`](Notebooks/05b_mcmc_cosine_parameterisation.ipynb) — explores a cosine parameterisation of the stellar inclination (`cos(i*)`) to improve sampling behaviour and parameter estimation.
