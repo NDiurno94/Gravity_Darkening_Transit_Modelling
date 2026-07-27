@@ -10,7 +10,7 @@
 
 # Gravity Darkening in Exoplanet Transits
 
-A Python-based Astrophysics research project investigating how gravity-darkened transit photometry can be used to constrain the true three-dimensional spin–orbit geometry of the hot Jupiter system **HAT-P-70.**
+A Python-based astrophysics research project investigating how gravity-darkened transit photometry can be used to constrain the true three-dimensional spin–orbit geometry of the hot Jupiter system **HAT-P-70.**
 
 This repository contains the code, analysis, and results developed during my MSc Astrophysics research project at University College London (UCL).
 
@@ -40,6 +40,7 @@ The project combines real TESS observations, statistical inference, and gravity-
 - Jupyter Notebook
 - TESS Space Telescope Data
 
+
 ## Why this project?
 
 Although this research was conducted in Astrophysics, the analytical workflow is broadly applicable to data science. The project involved working with real observational data, developing reproducible Python workflows, performing statistical inference, validating competing models, and communicating results through scientific visualisation and technical documentation.
@@ -48,11 +49,11 @@ Many of these skills are directly transferable to data analysis, scientific comp
 
 ## Project Status
 
-**MSc project completed**
+**Completed**
 
-Repository currently being reorganised and documented for public release.
+This repository documents the final version of my MSc Astrophysics research project at University College London (UCL), including the data processing workflow, gravity-darkened transit modelling, Bayesian parameter estimation, and accompanying dissertation.
 
-Additional documentation, cleaned notebooks and reproducibility notes will be added over time.
+Future updates, if any, will consist of minor documentation improvements or compatibility notes.
 
 ## Reproducibility
 
@@ -167,6 +168,12 @@ The workflow:
 > **Compatibility Note:** This notebook analyses the final MCMC chain produced during the simulation stage. Although the notebook itself can be executed independently, reproducing the results requires the MCMC chain generated using the UCLO computational workflow.
 
 **Notebook:** [`06_mcmc_parameter_estimation.ipynb`](Notebooks/06_mcmc_parameter_estimation.ipynb)
+
+## Dissertation
+
+The complete MSc dissertation and project presentation are included in the `Dissertation/` directory.
+
+These documents provide the scientific background, methodology, discussion, and interpretation of the results presented in this repository.
 
 ## License
 
