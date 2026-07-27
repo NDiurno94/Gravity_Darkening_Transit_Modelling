@@ -167,3 +167,9 @@ The workflow:
 > **Compatibility Note:** This notebook analyses the final MCMC chain produced during the simulation stage. Although the notebook itself can be executed independently, reproducing the results requires the MCMC chain generated using the UCLO computational workflow.
 
 **Notebook:** [`06_mcmc_parameter_estimation.ipynb`](Notebooks/06_mcmc_parameter_estimation.ipynb)
+
+## License
+
+The source code in this repository is licensed under the **MIT License** (see the `LICENSE` file).
+
+The MSc dissertation, presentation, and all associated written material remain © 2026 Nicola Diurno. These documents are included to document the research project and are not covered by the MIT License.
