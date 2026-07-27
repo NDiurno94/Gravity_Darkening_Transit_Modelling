@@ -89,8 +89,20 @@ The workflow:
 
 **Notebook:** [`02_transit_model_fitting.ipynb`](Notebooks/02_transit_model_fitting.ipynb)
 
-3. **Transit Modelling**
-   - Generated synthetic gravity-darkened transit models using STARRY.
+### 3. Stellar Oblateness
+
+This notebook derives the stellar parameters required for gravity-darkened transit modelling.
+
+The workflow:
+
+- Defines the stellar physical parameters.
+- Computes the allowable stellar inclination range.
+- Calculates the stellar rotation rate and oblateness.
+- Investigates how the stellar shape varies with inclination.
+- Estimates the polar and equatorial temperatures using gravity-darkening relations.
+- Provides the stellar parameters used as inputs for the STARRY transit simulations.
+
+**Notebook:** [`03_stellar_oblateness.ipynb`](Notebooks/03_stellar_oblateness.ipynb)
 
 4. **Parameter Estimation**
    - Applied Markov Chain Monte Carlo (MCMC) methods to estimate the best-fitting system parameters.
