@@ -56,8 +56,6 @@ Additional documentation, cleaned notebooks and reproducibility notes will be ad
 
 ## Methodology
 
-## Methodology
-
 ### 1. TESS Light Curve Preprocessing
 
 The first stage of the project focuses on preparing high-quality TESS photometric observations for gravity-darkened transit modelling.
