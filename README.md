@@ -74,8 +74,20 @@ This notebook:
 
 **Notebook:** [`01_tess_lightcurve_preprocessing.ipynb`](Notebooks/01_tess_lightcurve_preprocessing.ipynb)
 
-2. **Data Preparation**
-   - Processed and cleaned the light curves for analysis.
+### 2. Transit Light Curve Fitting
+
+This notebook implements an analytical transit model based on the formulation presented by Haswell (*Exoplanet Transits*), incorporating quadratic limb darkening.
+
+The workflow:
+
+- Defines an analytical transit light curve model.
+- Applies quadratic limb-darkening coefficients.
+- Imports the preprocessed TESS light curve.
+- Fits the analytical model to the observations.
+- Optimises the transit parameters.
+- Produces the best-fitting reference model used in the subsequent gravity-darkened analysis.
+
+**Notebook:** [`02_transit_model_fitting.ipynb`](Notebooks/02_transit_model_fitting.ipynb)
 
 3. **Transit Modelling**
    - Generated synthetic gravity-darkened transit models using STARRY.
