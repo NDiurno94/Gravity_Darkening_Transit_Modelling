@@ -54,6 +54,16 @@ Repository currently being reorganised and documented for public release.
 
 Additional documentation, cleaned notebooks and reproducibility notes will be added over time.
 
+## Reproducibility
+
+This project was developed as part of my MSc Astrophysics research at University College London (UCL).
+
+While most of the analysis and data processing notebooks can be reproduced using standard Python packages, the gravity-darkened transit modelling relies on the **STARRY** package and a software environment available on the University College London Observatory (UCLO) machines.
+
+The version of **STARRY** used during this project is no longer straightforward to install on modern Python environments due to dependency compatibility. As a result, some notebooks—particularly those involving the STARRY simulations and MCMC analysis—may not execute without recreating the original software environment.
+
+These notebooks are included to document the complete scientific workflow and methodology used throughout this research project. They are intended to provide transparency, reproducibility of the scientific approach, and insight into the implementation of the gravity-darkened transit modelling pipeline.
+
 ## Methodology
 
 ### 1. TESS Light Curve Preprocessing
@@ -104,8 +114,22 @@ The workflow:
 
 **Notebook:** [`03_stellar_oblateness.ipynb`](Notebooks/03_stellar_oblateness.ipynb)
 
-4. **Parameter Estimation**
-   - Applied Markov Chain Monte Carlo (MCMC) methods to estimate the best-fitting system parameters.
+### 4. Gravity-Darkened Transit Modelling
+
+This notebook implements the gravity-darkened transit model using the **STARRY** package to simulate transit light curves for HAT-P-70. The simulations investigate how stellar rotation, oblateness, gravity darkening, and spin–orbit geometry influence the observed transit profile.
+
+The workflow:
+
+- Imports the **STARRY** gravity-darkened transit modelling framework.
+- Defines the stellar and planetary system parameters.
+- Generates synthetic gravity-darkened transit light curves.
+- Investigates the effects of stellar inclination, oblateness, and gravity darkening on the transit shape.
+- Compares simulated models with the observed TESS light curve.
+- Produces the gravity-darkened models used for the MCMC parameter estimation.
+
+> **Compatibility Note:** This notebook was developed using the software environment available on the University College London Observatory (UCLO) machines. The version of **STARRY** used during this project is not directly compatible with many modern Python environments. Consequently, this notebook may require the original UCLO software environment, or equivalent package versions, to execute successfully.
+
+**Notebook:** [`04_gravity_darkened_transit_modelling.ipynb`](Notebooks/04_gravity_darkened_transit_modelling.ipynb)
 
 5. **Model Evaluation**
    - Compared simulated and observed light curves using statistical goodness-of-fit metrics.
